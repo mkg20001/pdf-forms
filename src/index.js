@@ -103,14 +103,23 @@ function PDF(pdf) {
 
         const list = await annotationList(doc)
 
+        for (const field in list) { // eslint-disable-line guard-for-in
+          const annotation = list[field]
+          fillIn[annotation.id] = annotation.fieldValue
+        }
+
         for (const field in values) { // eslint-disable-line guard-for-in
-          if (!list[field]) {
+          const annotation = list[field]
+
+          if (!annotation) {
             throw new Error(`Field ${JSON.stringify(field)} is not in this PDF`)
           }
 
+          const value = values[field]
+
           // TODO: type validate / input validate
 
-          fillIn[list[field].id] = values[field]
+          fillIn[annotation.id] = value
         }
 
         const annotationStorage = {

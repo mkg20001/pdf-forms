@@ -24,6 +24,7 @@ describe('forms', () => {
       out = await pdf.fillOut({
         Q_PAF_Vers_Vorname: 'Max',
         Q_PAF_Vers_Name: 'Musterman',
+        AW_UEBERBRÜCK_1: true,
       })
     })
 
@@ -32,6 +33,7 @@ describe('forms', () => {
 
       eq(fields.Q_PAF_Vers_Vorname.fieldValue, 'Max')
       eq(fields.Q_PAF_Vers_Name.fieldValue, 'Musterman')
+      eq(fields.AW_UEBERBRÜCK_1.fieldValue, 'ja')
     })
   })
 })
