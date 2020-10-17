@@ -1,0 +1,40 @@
+{
+  "name": "pdf-forms",
+  "version": "0.0.1",
+  "description": "Easily fill out form fields in PDF files",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -A",
+    "cov": "nyc mocha",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "template": {
+    "extends": [
+      "nodeEslint"
+    ]
+  },
+  "keywords": [
+    "pdf",
+    "pdfjs",
+    "pdf-forms",
+    "forms"
+  ],
+  "author": "Maciej Krüger <mkg20001@gmail.com>",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "eslint": "*",
+    "eslint-config-ipfs": "*",
+    "eslint-config-oclif": "*",
+    "mkgs-tool": "^0.1.12",
+    "mocha": "*",
+    "nyc": "*"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^2.6.347",
+    "web-streams-polyfill": "^3.0.0"
+  }
+}
