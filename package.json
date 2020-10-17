@@ -36,5 +36,13 @@
   "dependencies": {
     "pdfjs-dist": "^2.6.347",
     "web-streams-polyfill": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkg20001/pdf-forms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkg20001/pdf-forms/issues"
+  },
+  "homepage": "https://github.com/mkg20001/pdf-forms#readme"
 }
